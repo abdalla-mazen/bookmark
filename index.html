@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/all.min.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/main.css">
+</head>
+
+<body>
+
+    <div class="container ">
+
+
+        <div class="row ">
+            <div class="col">
+                <div class="title py-5 text-center">
+                    <h1>Bookmarker</h1>
+                </div>
+                <div class="input py-4">
+                    <div class="main-heading">
+                        <h2 class="h2 text-center"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i
+                                class="fa-solid fa-bookmark"></i></h2>
+
+                    </div>
+                    <div class="form">
+                        <div class="mb-3">
+                            <label for="siteName" class="form-label fw-bolder"><i
+                                    class="fa-solid fa-book-bookmark me-1"></i> Site Name</label>
+                            <input type="text" oninput="validationName()" class="form-control" id="siteName"
+                                placeholder="Bookmark Name">
+                            <p id="alertName" class="alert alert-danger d-none my-3">Site name must contain at least 3
+                                characters</p>
+                        </div>
+                        <div class="mb-3">
+                            <label for="siteUrl" class="form-label fw-bolder"><i class="fa-solid fa-link me-1"></i>Site
+                                URL</label>
+                            <input type="text" oninput="validationUrl()" class="form-control" id="siteUrl"
+                                placeholder="Website URL">
+                            <p id="alertUrl" class="alert alert-danger d-none my-3">Please enter a valid URL starting
+                                with 'http://' or 'https://'. Make sure it includes the domain name (e.g., example.com)
+                                and optionally includes 'www'. The URL may also have additional path or query
+                                parameters.</p>
+                        </div>
+                        <button class="btn " onclick="addSite()">Submit</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="row py-4">
+            <div class="col">
+                <table class="table text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">Index</th>
+                            <th scope="col">Website Name</th>
+                            <th scope="col">Visit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
